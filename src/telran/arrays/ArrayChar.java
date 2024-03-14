@@ -4,7 +4,10 @@ package telran.arrays;
 public class ArrayChar {
    private char[] array;
    public ArrayChar(char[] array) {
-	  this.array = array;
+	  this.array = new char[array.length];
+	  for(int i = 0; i < array.length; i++) {
+		  this.array[i] = array[i];
+	  }
    }
    public int compareTo(ArrayChar another) {
 	  return compareCommon(another, false);
